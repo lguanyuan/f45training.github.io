@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>F45</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+body { text-align:center; 
+background-image:url(
+'background1.jpg');
+background-repeat: no-repeat;   background-attachment: fixed;   background-size: cover }
+#AA { font-size:15pt; font-family:optima; }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b><img src="logo.jpg" width="200" height="100"</h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+	<a href="new.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">New to F45?</a>
+    <a href="workout.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workout </a> 
+     <a href="rates.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Why F45 works</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo" style="font-family:optima"><b>New to F45? </b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <img src="text2.jpg" width="1000" height="300"> 
+
+ 
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red" style="border:2px; border-style:solid; border-color:#FF0000; padding: 0.3em;"> <b>10 minutes before class</b> </h1> <br>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p style="color:red">First class? Let’s do this. Get there 10 minutes before class to meet your trainer. We’ll check you in, get you sorted, and walk you through what to expect during your first class.
+    </p> </div>
+<h2 class="w3-xxxlarge w3-text-red"><b>Why should you choose us?</h2>
+<iframe width="420" height="345" src="https://www.youtube.com/embed/ORu9Nq2y_uM">
+</iframe>
+<table id="t01">
+  
+  <tr>
+    <td>DEMO TIME <img src="icon1.jpg">  </td>
+    <td>Line up on the blue track and the trainers will take you step by step through each exercise. No surprises here.</td>
+   
+  </tr>
+  <tr>
+    <td>WARM UP <img src="icon2.jpg"></td>
+    <td>Time for your warm-up. F45TV and the trainers will get you ready to perform at your best.</td>
+    
+  </tr>
+  <tr>
+    <td>ITS GO TIME <img src="icon3.jpg"></td>
+    <td>Get ready for 45 minutes of heart-pumping, sweat-dripping fun. F45TV will guide you. F45FM will move you. Our trainers will support you every step of the way.
+</td>
+<tr>
+<td>HIGH FIVES <img src="icon4.jpg"></td>
+<td>This is team training.This is life changing.This is F45 </td>
+
+   
+  </tr>
+</table>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

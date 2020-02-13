@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>F45</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+body { text-align:center; 
+background-image:url(
+'f45.jpg');
+background-repeat: no-repeat;   background-attachment: fixed;   background-size: cover }
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b><img src="logo.jpg" width="200" height="100"</h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+	<a href="new.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">New to F45?</a>
+    <a href="workout.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workout </a> 
+     <a href="rates.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Why F45 works</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>TEAM TRAINING LIFE CHANGING</b></h1>
+    
+  </div>
+  
+  <!-- Our classes-->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Our classes</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="hit.jpg">
+          <p>F45 is specifically designed to provide a functional full-body workout while improving energy levels, metabolic rate, strength, and endurance..</p>
+         </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="train.jpg">
+        <div 
+          
+          <p>The team mentality at F45 Training helps members transform their lifestyle physically and mentally while encouraging community growth and a no-ego attitude.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="45.jpg">
+       
+          <p>F45 is one of the most time-efficient ways of training. We aim to burn up to 750 calories per 45-minute sessio.</p>
+        </div>
+      </div>
+    </div>
+<img src="text1.jpg"> <br> 
+<h1 class="w3-xxxlarge w3-text-red" style="border:2px; border-style:solid; border-color:#FF0000; padding: 0.3em;"> <b>What is F45?</b> </h1> <br>
+ <iframe width="420" height="345" src="https://www.youtube.com/embed/a6DqrsVT7Co">
+</iframe>
+     <h1 class="w3-xxxlarge w3-text-red" style="border:4px; border-style:solid; border-color:#FF0000; padding: 0.5em;"> Inside view of F45 </h1>
+	 <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+<video  id="video1" width="320" height="240" controls>
+  <source src="f45training.mp4" type="video/mp4">
+  <source src="f45training.ogg" type="video/ogg">
+
+</video>
+</div> 
+  
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 720; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 300; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 560; 
+} 
+</script>
+
+</body>
+</html>

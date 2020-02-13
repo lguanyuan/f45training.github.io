@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>F45</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+body {text-align:center; 
+background-image:url(
+'background3.jpg');
+background-repeat: no-repeat;   background-attachment: fixed;   background-size: cover }
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+
+.img_wrp {
+  display: inline-block;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+</style>
+<body>
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b><img src="logo.jpg" width="200" height="100"</h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+	<a href="new.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">New to F45?</a>
+    <a href="workout.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workout </a> 
+    <a href="rates.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Why F45 works</a> 
+    
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+ 
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Why F45 works</b></h1>
+    
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  <img src="text10.jpg" width="1200" height="300"> 
+  <img src="text11.jpg" width="1200" height="400">
+  <img src="text12.jpg" width="1200" height="400">
+  <img src="text13.jpg" width="1200" height="400">
+  <img src="text14.jpg" width="1200" height="400">
+  
+  <h1 class="w3-xxxlarge w3-text-black" style="border:4px; border-style:solid; border-color:#FF0000; padding: 0.5em;"><b>The Team</b></h1>
+ <div> 
+ <img id="myImg" src="face1.jpg" alt="Cory is the face of F45 Training and has been in the Fitness industry for over a decade as both an Athlete and a trainer.
+Cory operates the Venice and West Hollywood studios in Los Angeles, as well as running our U.S. Inductions and Trainer Training workshops with Pete." style="width:100%;max-width:300px">
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+<div class="gallery">
+<a href="face2info.jpg"><img src="face2.jpg" title="Dr Wallace Lee" width="300" height="360"></a>
+<a href="face3info.jpg"><img src="face3.jpg" title="Chris Barnes" width="300" height="360" ></a>
+<a href="face4info.jpg"><img src="face4.jpg" title="Peter Pisani" width="300" height="360" ></a>
+<a href="face5info.jpg"><img src="face5.jpg" title="Lauren Vickers" width="300" height="360" ></a>
+<a href="face6info.jpg"><img src="face6.jpg" title="Nick Philips" width="300" height="360" ></a>
+</div> 
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+  
+ 
+
+  
+
+
+</body>
+</html>
